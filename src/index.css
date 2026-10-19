@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-cad-darkest: #090d16;
+    --bg-cad-dark: #0f172a;
+    --bg-cad-panel: #151f32;
+    --border-cad: #334155;
+    --text-cad-light: #cbd5e1;
+    --accent-gold: #d97706;
+  }
+
+  body {
+    background-color: #090d16;
+    color: #cbd5e1;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+  }
+}
+
+/* Custom CAD scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Engineering measurement typography */
+.cad-mono {
+  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Viewport crosshair & grid styles */
+.canvas-container canvas {
+  outline: none;
+}
