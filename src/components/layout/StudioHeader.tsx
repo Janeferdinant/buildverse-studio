@@ -18,7 +18,8 @@ import {
   FileText,
   Home,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  Sparkles
 } from 'lucide-react';
 
 export const StudioHeader: React.FC = () => {
@@ -103,6 +104,18 @@ export const StudioHeader: React.FC = () => {
         >
           <Compass className="w-3.5 h-3.5" />
           <span>3D Designer</span>
+        </button>
+
+        <button
+          onClick={() => setActivePage('interiors')}
+          className={`flex items-center space-x-1.5 px-2.5 py-1.5 rounded text-xs transition-all ${
+            activePage === 'interiors'
+              ? 'bg-gradient-to-r from-gold via-amber-400 to-terracotta text-black font-bold shadow-gold-glow'
+              : 'text-gold hover:text-white hover:bg-cad-surface/60 border border-gold/30'
+          }`}
+        >
+          <Sparkles className="w-3.5 h-3.5 text-gold-glow" />
+          <span>AI Room Designer</span>
         </button>
 
         <button

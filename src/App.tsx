@@ -13,6 +13,7 @@ import { PriceCatalogManager } from './components/estimation/PriceCatalogManager
 import { ConstructionGantt } from './components/schedule/ConstructionGantt';
 import { FinancialAnalysisView } from './components/financials/FinancialAnalysisView';
 import { ProjectReportsView } from './components/reports/ProjectReportsView';
+import { AIRoomDesignerWorkspace } from './components/interior/AIRoomDesignerWorkspace';
 
 export function App() {
   const activePage = useEditorStore((state) => state.activePage);
@@ -41,6 +42,7 @@ export function App() {
         {activePage === 'qto' && <QuantityTakeOffTable />}
         {activePage === 'estimator' && <BOQEstimatorTable />}
         {activePage === 'materials' && <PriceCatalogManager />}
+        {activePage === 'interiors' && <AIRoomDesignerWorkspace />}
         {activePage === 'schedule' && <ConstructionGantt />}
         {activePage === 'financials' && <FinancialAnalysisView />}
         {activePage === 'reports' && <ProjectReportsView />}
